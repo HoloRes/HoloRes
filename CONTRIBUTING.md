@@ -17,6 +17,8 @@ Tips for when adding new features:
 
 ## Table of contents
 
+[Get started](#get-started)
+
 [GitHub](#github)
 - [Repository page](#the-initial-page)
 - [Issues page](#issues-page)
@@ -42,6 +44,24 @@ Tips for when adding new features:
 ## Get started
 
 First of all, download the [GitAhead client](https://gitahead.github.io/gitahead.com/) and login with your GitHub account. A lot of useful links are pinned in the Discord channel.
+
+### Recommended software
+These are only examples for if you don't already have stuff installed, all of the software listed is free or has a free version.
+
+#### IDE:
+- [Jetbrains IntelliJ IDEA](http://jetbrains.com/idea)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+#### Git clients:
+- [GitAhead](https://gitahead.github.io/gitahead.com/)
+- [GitKraken](https://www.gitkraken.com/)
+
+#### Other software:
+- Node.js: Since most projects are coded in JavaScript it's useful to have Node.js installed, make sure to choose the [**LTS(Long Term Support)**](https://nodejs.org/en/about/releases/) version. You can easily recognize LTS versions by checking if it's an even number.
+
+### Useful sites
+- [Google Fonts](https://fonts.google.com/)
+- [Free for developers](https://free-for.dev/)
 
 ## GitHub
 
@@ -70,10 +90,6 @@ Make sure to try to use the correct labels whenever you can. If you see an issue
 ![Pull Requests page](https://cdn.discordapp.com/attachments/723876866523529276/724008999485440020/vFCdQnQIAAAQIECBAgQIAAAQIECBAgQIAAgeMCfpPkwokQIAAAQIECBAgQIAAAQIECBAgQIAAgesHLz08Ln88AsAAAAASUVORK5C.png)
 
 The pull requests page is very similar to the issues page and the thing about labels is the same. Make sure it's a draft and optionally add `WIP:` in front of the title.
-<!--
-    If Ek adds the WIP app, it should be the other way around.
-    Drafting will be optional and adding "WIP:" in front should be preferred.
--->
 
 ![Filter menu](https://cdn.discordapp.com/attachments/723876866523529276/724199942301941800/unknown.png)
 
