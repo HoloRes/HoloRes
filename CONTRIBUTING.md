@@ -57,7 +57,7 @@ These are only examples for if you don't already have stuff installed, all of th
 - [GitKraken](https://www.gitkraken.com/)
 
 #### Other software:
-- Node.js: Since most projects are coded in JavaScript it's useful to have Node.js installed, make sure to choose the [**LTS(Long Term Support)**](https://nodejs.org/en/about/releases/) version. You can easily recognize LTS versions by checking if it's an even number.
+- [Node.js](https://nodejs.org/en): Since most projects are coded in JavaScript it's useful to have Node.js installed, make sure to choose the [**LTS(Long Term Support)**](https://nodejs.org/en/about/releases/) version. You can easily recognize LTS versions by checking if it's an even number.
 
 ### Useful sites
 - [Google Fonts](https://fonts.google.com/)
