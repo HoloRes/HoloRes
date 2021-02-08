@@ -3,7 +3,7 @@
 
 Welcome to the Hololive Resort Discord GitHub organization. This organization holds the code for some of our projects.
 
-If you have suggestions for any repository: Feel free to create an issue
+If you have suggestions for any repository: Feel free to use the discussions tab
 
 You want to contribute: Fork the repo, do your changes and feel free to create a PR (Pull Request).
 
