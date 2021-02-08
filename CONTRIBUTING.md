@@ -54,6 +54,7 @@ These are only examples for if you don't already have stuff installed, all of th
 
 #### Other software:
 - [Node.js](https://nodejs.org/en): Since most projects are coded in JavaScript it's useful to have Node.js installed, make sure to choose the [**LTS(Long Term Support)**](https://nodejs.org/en/about/releases/) version. You can easily recognize LTS versions by checking if it's an even number.
+- NVM (Node Version Manager): [Windows version](https://github.com/coreybutler/nvm-windows) and [Linux/MacOS version](https://github.com/nvm-sh/nvm), useful in case some projects are still on an older version.
 - [ESLint](guides/ESLint.md): ESLint has it's own guide
 
 ### Useful sites
