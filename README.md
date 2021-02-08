@@ -1,4 +1,4 @@
-![Header](/Header.png)
+![Header](img/readme/Header.png?raw=true "Header image")
 
 Welcome to the [Hololive Resort Discord](https://discord.gg/HoloRes) GitHub organization.
 This organization holds the code for some of our projects, feel free to contribute to any repository if you want to.

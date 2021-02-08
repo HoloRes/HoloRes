@@ -25,15 +25,10 @@ Tips for when adding new features:
 - [Pull Requests page](#pull-requests-page)
 - [Good to know](#good-to-know)
 
-[GitAhead client](#gitahead-client)
+[GitKraken client](#gitkraken-client)
+- [Setting the client up](#setting-up)
 - [How to clone a repository](#clone-a-repository)
-- [The menu](#top-menu)
-  - [Fetching](#the-fetch-button)
-  - [Pulling](#the-pull-button)
-  - [Pushing](#the-push-button)
-  - [Checking out a branch](#the-checkout-button)
-  - [Stashing](#the-stash-buttons)
-- [Creating a new branch](#how-to-create-a-new-branch)
+- [Basic Git actions](#basic-git-actions)
 
 [Git Commit Messages guidelines](#git-commit-messages)
 
@@ -43,7 +38,7 @@ Tips for when adding new features:
 
 ## Get started
 
-First of all, download the [GitAhead client](https://gitahead.github.io/gitahead.com/) and login with your GitHub account. A lot of useful links are pinned in the Discord channel.
+First of all, download the [GitKraken client](https://www.gitkraken.com/download) and login with your GitHub account.
 
 ### Recommended software
 These are only examples for if you don't already have stuff installed, all of the software listed is free or has a free version.
@@ -53,115 +48,130 @@ These are only examples for if you don't already have stuff installed, all of th
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 #### Git clients:
-- [GitAhead](https://gitahead.github.io/gitahead.com/)
 - [GitKraken](https://www.gitkraken.com/)
+- [GitAhead](https://gitahead.github.io/gitahead.com/)
+    Guide can be found [here](guides/GitAhead.md)
 
 #### Other software:
 - [Node.js](https://nodejs.org/en): Since most projects are coded in JavaScript it's useful to have Node.js installed, make sure to choose the [**LTS(Long Term Support)**](https://nodejs.org/en/about/releases/) version. You can easily recognize LTS versions by checking if it's an even number.
+- [ESLint](guides/ESLint.md): ESLint has it's own guide
 
 ### Useful sites
-- [Google Fonts](https://fonts.google.com/)
 - [Free for developers](https://free-for.dev/)
+
+#### Website:
+- [JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Next.JS docs, our framework for React](https://nextjs.org/docs)
+- [React docs](https://reactjs.org/docs/getting-started.html)
+- [Next Auth](https://next-auth.js.org/getting-started/introduction)
+- [Grommet, our design library](https://v2.grommet.io/)
+
+#### Discord bots
+- [Discord.JS docs](https://discord.js.org/#/docs/main/stable/general/welcome)
 
 ## GitHub
 
 ### The initial page
-![GitHub repo page, with beta features enabled](https://cdn.discordapp.com/attachments/723876866523529276/723878776655577208/unknown.png)
+![](img/contributing/repo_page.png "GitHub repository page")
 
 When you open the GitHub repository, you'll likely see something similar to this.
 Most of it should speak for itself but here a list anyway:
 
-![Branch and tag viewer](https://cdn.discordapp.com/attachments/723876866523529276/723879530305159228/unknown.png)
+![](img/contributing/branch_switcher.png "Branch and tag viewer")
 
 The branches and tags viewer, this way you can look at the code of someone else is working on (in case of branches) or a specific version (in case of tags).
 
+**Additional notes:**
+- Depfu branches are automatically generated every week for dependencies updates
+    - But it will not create a new one until the previous has been closed/merged
+    - You can let Depfu regenerate the updates and rebase to get more up to date packages and resolve merge conflicts by commenting `@depfu rebase`
+
 ### Issues page
-![Issues page](https://cdn.discordapp.com/attachments/723876866523529276/724006101485617222/xzEvCAuPnGwAAAAASUVORK5CYII.png)
+![](img/contributing/issue_page.png "Issues page")
 
 This is the issues page, but it also has a few other purposes, here's a list:
-- Feature requests
-- Discussion
-- Help requests for coding
-- And of course bugs
+- Internal feature requests
+- Bugs
+
+If you need help with development, use either Discord or the discussions tab.
+If you're not in the organization, for feature requests, also please use the discussions tab.
 
 Make sure to try to use the correct labels whenever you can. If you see an issue that hasn't been assigned to anyone yet, feel free to assign it to yourself if you can do it. Otherwise ask if you can help by commenting.
 
 ### Pull requests page
-![Pull Requests page](https://cdn.discordapp.com/attachments/723876866523529276/724008999485440020/vFCdQnQIAAAQIECBAgQIAAAQIECBAgQIAAgeMCfpPkwokQIAAAQIECBAgQIAAAQIECBAgQIAAgesHLz08Ln88AsAAAAASUVORK5C.png)
+![](img/contributing/pr_page.png "Pull Requests page")
 
-The pull requests page is very similar to the issues page and the thing about labels is the same. Make sure it's a draft and optionally add `WIP:` in front of the title.
+The pull requests page is very similar to the issues page and the thing about labels is the same. Make sure you mark it as a draft if your PR is not ready yet.
+The PR will show a red cross, yellow dot or green checkmark behind the name, this shows the status of all the checks. If it's a cross, it's likely that code doesn't comply with our style or for instance the preview deployment or docker image build failed.
 
-![Filter menu](https://cdn.discordapp.com/attachments/723876866523529276/724199942301941800/unknown.png)
+![](img/contributing/pr_filter_menu.png)
 
-You may notice something that is a bit weird. If you look at this you might think that I'm the reviewer for this PR, but that isn't the case.
+While improved from the previous revision over this guide, this bar still isn't really logical. The top bar is the filter, and whatever is below doesn't have to be that.
+You might for instance think that there's still one person that needs to review this, while it shows how many issues are linked to this PR.
 
-![Hover over profile picture](https://cdn.discordapp.com/attachments/723876866523529276/724200348729737222/unknown.png)
-
-If you hover over the profile picture, you will see I'm not the reviewer, but the person who this is assigned to. The bar above is to filter on users or status, but GitHub has made it a bit confusing.
+![](img/contributing/pr_linked_issue.png)
 
 ## Good to know
 - You can reference a Pull Request or Issue by using `#<ID>`, the ID can be found under the title on the overview page or next to the title on the issue page.
 - In case you don't want to get spammed in your email from GitHub, you can disable the emails for specific notifications in your settings.
 - GitHub has markdown, use it for longer issues or comments. Here is a [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet).
-- Just as in Discord, you can ping users in a comment, issue or PR by using `@username`
+- Just as in Discord, you can mention users in a comment, issue or PR by using `@username`
 
-## GitAhead client
+## GitKraken client
+### Setting up
+After install you'll see this screen, log in using your GitHub account. 
+
+![](img/contributing/gitkraken_login.png "Gitkraken login")
+
+After that setup your profile, the profile name is something only you will see but the name and email you associate with the profile will be public and associated with your commits.
+If you don't want your email to be public, you can enable `Keep my email addresses private` in your [Github Settings](https://github.com/settings/emails).
+You will be shown an email that you can use in your profile.
+If you want to make sure that you never forget to use this private email you can also enable `Block command line pushes that expose my email` in your GitHub settings.
 
 ### Clone a repository
-![Git clone URL](https://cdn.discordapp.com/attachments/723876866523529276/723877829695242320/unknown.png)
+After you've logged in and created your profile you're ready to clone a repository.
+You can do so by clicking on the `Clone a repo` button and then selecting GitHub.com, next to `Which repository to clone` is a dropdown with a list of all the repositories you have access to.
+Select one and select the place you want to store the files.
+After you've cloned it will show a notification at the top, open the repository and you should see something like this:
 
-Under the File menu you can clone the repository using the URL that is shown here in GitHub by clicking on the clone button
+![](img/contributing/gitkraken_repo.png "Gitkraken repository view")
 
-### Top menu
-![Menu](https://cdn.discordapp.com/attachments/723876866523529276/724187878044860436/unknown.png)
+### Basic Git actions
+#### Top menu
+![](img/contributing/gitkraken_menu.png "Gitkraken menu")
 
-This menu is a really important one. I'll explain most of the buttons here, the ones not explained are either not important or should speak for themselves.
+From left to right:
+- Switch repository
+- Switch branch (You can also switch branches by doubleclicking on the name in the timeline)
+- Undo
+- Redo
+- Pull, this updates the code on your local machine if there's newer code on GitHub and there's no conflict between your local copy and the newer copy
+- Push, after you've committed you code you push it to upload it to GitHub
+- Stash, in case there's a conflict and you can't pull but keep your changes, you can stash it. This will remove all changes you've made that aren't committed and save them.
+- Pop, pops the latest stash and applies the changes in the stash
 
-#### The Fetch button
-![Fetch button](https://cdn.discordapp.com/attachments/723876866523529276/724189298030542868/unknown.png)
+#### Committing
+After you've made changes you'll see this in GitKraken:
 
-This button will fetch changes from GitHub, but not update the files on your local machine.
+![](img/contributing/gitkraken_commit.png "Gitkraken commit screen")
+Stage all the files you want to be included in the commit, for the commit message, please follow the [guidelines](#git-commit-messages).
+After that, commit and push when ready.
 
-#### The Pull button
-![Pull button](https://cdn.discordapp.com/attachments/723876866523529276/724189796540350494/unknown.png)
+#### Other things
+##### Branches
+Whenever you create a new branch and push it, you may encounter this:
 
-This is actually a menu, but you probably won't need to use the items in the menu. Pulling does the same as fetching, but also updates the code on your local machine if there is newer code in GitHub.
+![](img/contributing/gitkraken_new_branch.png "Remote config")
 
-#### The Push button
-![Push button](https://cdn.discordapp.com/attachments/723876866523529276/724190612382941215/unknown.png)
+Just click on submit
 
-When you have committed your files and are ready to push it to GitHub you can push this button. It'll show a number depending on how many commits you are pushing.
-
-![Push error](https://cdn.discordapp.com/attachments/723876866523529276/724207475464863744/unknown.png)
-
-When pushing you may encounter this error, click on "push and set the current branch's upstream" and it should get pushed now.
-
-#### The Checkout button
-![Checkout button](https://cdn.discordapp.com/attachments/723876866523529276/724194180683006022/unknown.png)
-
-If you want to switch to another branch, you can use this button.
-
-#### The Stash buttons
-![Stash and Pop Stash button](https://cdn.discordapp.com/attachments/723876866523529276/724196236206538803/unknown.png "Stash | Pop Stash")
-
-You may encounter a moment where you can't pull from GitHub due to a so called "Merge Conflict". In that case you can use the Stash and Pop Stash function if you want to keep your changes. First you Stash your changes by clicking on the left button, after that you pull from GitHub and you can use the Pop Stash button to reapply your changes to the files.
-
-### How to create a new branch
-![Creating a new branch](https://cdn.discordapp.com/attachments/722434771422019584/723874342957613137/unknown.png)
-
-First open the branch menu and press New Branch.
-
-
-![Name the branch](https://cdn.discordapp.com/attachments/723876866523529276/723876877483114597/unknown.png)
-
-Follow the naming scheme of `username-change_name`, so for example: `goldelysium-contribution_guide`. Also make sure to have "Checkout branch" ticked so that you automatically change to it. Most of the time you want to have master as start point.
-
-### Creating commits
-![Commit message](https://cdn.discordapp.com/attachments/723876866523529276/724186386281791528/unknown.png)
-
-If you made changes to files, it'll show "Uncommittted changes" in the git timeline. Write a commit message with a title on the first line, skip a line and then you can put a detailed message if needed. Sometimes only a title is enough.
-
-Click on stage all if you want to commit all the files you've changed, otherwise select the files or even the lines that you want to commit. After you've done that you can commit and push it.
+##### GPG Signing
+For security's sake you (should) can enable commit signing using GPG.
+In the settings you can generate a new GPG key, for even better security use a passphrase.
+Also enable `Sign Commits by default` and `Sign Tags by default`.
+After you've generated it, it'll be selected as your signing key, copy the GPG Public key and add it to your GitHub in the [settings](https://github.com/settings/keys).
+If you don't use a GPG key anymore, **DON'T** remove it from your account, it'll turn all your previous signed commits unverified.
+Do remove it however if it's compromised. 
 
 ## Git Commit Messages
 
